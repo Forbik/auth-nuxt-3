@@ -1637,13 +1637,6 @@
     local-pkg "^0.4.3"
     vee-validate "4.11.8"
 
-"@vee-validate/rules@^4.11.8":
-  version "4.11.8"
-  resolved "https://registry.yarnpkg.com/@vee-validate/rules/-/rules-4.11.8.tgz#07220de864e6fc2c03686bbacfec718ca312ffc8"
-  integrity sha512-0qpYMCylja/bKe5VXBXLdCceJNz5PDcD1LN0ukh28MVWCDT/RE6d/laUE1LyXXwJwVTFLOvfz2ynoeatj+LLNg==
-  dependencies:
-    vee-validate "4.11.8"
-
 "@vee-validate/yup@^4.11.8":
   version "4.11.8"
   resolved "https://registry.yarnpkg.com/@vee-validate/yup/-/yup-4.11.8.tgz#2620422ff9b03faa0eb9e933aa0664fdfd39d350"
