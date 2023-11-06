@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
-  devtools: { enabled: true },
   modules: [
     '@pinia/nuxt',
     '@nuxtjs/eslint-module',
@@ -27,5 +25,8 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/auth-nuxt-3/',
     buildAssetsDir: 'assets'
+  },
+  experimental: {
+    payloadExtraction: true
   }
 })
