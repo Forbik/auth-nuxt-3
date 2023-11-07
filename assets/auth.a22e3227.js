@@ -1,0 +1,1 @@
+import{L as i,E as r,M as u}from"./entry.2df224aa.js";import{u as t,a as s}from"./auth.6f9431c6.js";import"./useEndpoint.df2d85eb.js";const m=i(e=>{const{authenticated:n}=r(t()),a=s("token");if(a.value&&(n.value=!0),a.value&&(e==null?void 0:e.name)==="login")return u("/");if(!a.value&&(e==null?void 0:e.name)!=="login")return u("/login")});export{m as default};

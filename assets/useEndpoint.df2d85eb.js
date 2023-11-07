@@ -1,0 +1,1 @@
+const c="https://dummyjson.com";function d(e,r){const u=(n=>{const o=Object.keys(n).map(t=>`${encodeURIComponent(t)}=${encodeURIComponent(n[t])}`).join("&");return o?`?${o}`:""})({...r});return`${c}/${e}${u}`}export{d as u};

@@ -1,1 +1,0 @@
-import{N as s}from"./entry.9e7d7ce5.js";const a=s("notification",{state:()=>({title:"",message:"",type:""}),actions:{showNotification(t,i,e="success"){this.title=t,this.message=i,this.type=e,setTimeout(()=>{this.clearNotification()},3e3)},clearNotification(){this.title="",this.message="",this.type=""}}});export{a as u};
