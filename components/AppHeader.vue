@@ -143,6 +143,7 @@ import { useAuthStore } from '~/store/auth'
 const route = useRoute()
 const navigation = ref([
   { name: 'Home', href: '/', current: route.path === '/' },
+  { name: 'Products', href: '/products', current: route.path === '/products' },
   { name: 'About Us', href: '/about', current: route.path === '/about' },
   { name: 'Contacts', href: '/contacts', current: route.path === '/contacts' }
 ])
