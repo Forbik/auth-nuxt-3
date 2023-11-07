@@ -28,5 +28,10 @@ export default defineNuxtConfig({
   },
   experimental: {
     payloadExtraction: true
+  },
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.API_URL
+    }
   }
 })
