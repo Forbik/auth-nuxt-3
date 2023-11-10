@@ -28,10 +28,12 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@nuxt/image": "^1.0.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@pinia/nuxt": "^0.5.1",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@vee-validate/nuxt": "^4.11.8",
-    "@vee-validate/yup": "^4.11.8"
+    "@vee-validate/yup": "^4.11.8",
+    "vue3-carousel-nuxt": "^1.1.0"
   }
 }
