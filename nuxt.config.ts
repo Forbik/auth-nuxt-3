@@ -4,8 +4,10 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
+    '@nuxt/image',
     'nuxt-headlessui',
-    '@vee-validate/nuxt'
+    '@vee-validate/nuxt',
+    'vue3-carousel-nuxt'
   ],
   eslint: {
     /* module options */

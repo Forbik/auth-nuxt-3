@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 
 export interface ProductPayloadInterface {
-  id: string,
+  id: number,
   title: string,
   description: string,
   price: number,
@@ -16,23 +16,28 @@ export interface ProductPayloadInterface {
 
 interface productState {
   products: ProductPayloadInterface[],
-  limit: number
+  currentProduct: ProductPayloadInterface | null,
+  limit: number,
+  total: number
 }
 
 export const useProductStore = defineStore('products', {
   state: (): productState => ({
     products: [],
-    limit: 20
+    currentProduct: null,
+    limit: 12,
+    total: 0
   }),
   actions: {
-    async fetchProducts(): Promise<ProductPayloadInterface[]> {
+    async fetchProducts (limit: number = 12): Promise<ProductPayloadInterface[]> {
       try {
         const response = await fetch(useEndpoint('products', {
-          limit: 12
-        }));
+          limit
+        }))
         const data = await response.json()
         if (data && data.products) {
           this.products = data.products
+          this.total = data.total
           return data.products as ProductPayloadInterface[]
         } else {
           throw new Error('Data structure is not as expected')
@@ -40,6 +45,21 @@ export const useProductStore = defineStore('products', {
       } catch (err) {
         console.warn(err)
         return [] as ProductPayloadInterface[]
+      }
+    },
+    async fetchProductById (id: number): Promise<ProductPayloadInterface> {
+      try {
+        const response = await fetch(useEndpoint(`products/${id}`))
+        const product: ProductPayloadInterface = await response.json()
+        if (product) {
+          this.currentProduct = product
+          return product as ProductPayloadInterface
+        } else {
+          throw new Error('Data structure is not as expected')
+        }
+      } catch (err) {
+        console.warn(err)
+        return {} as ProductPayloadInterface
       }
     }
   }
