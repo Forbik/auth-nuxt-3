@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-slate-100">
+  <footer class="bg-slate-100 h-[67px]">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="flex flex-col items-center justify-between sm:flex-row py-4">
         <nuxt-link to="/">

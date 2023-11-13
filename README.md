@@ -9,6 +9,10 @@ I used [DummyJSON](https://dummyjson.com/) as the fake API endpoint to authentic
  - VeeValidate
  - EsLint
 
+## Link to GitHub Page
+
+[https://forbik.github.io/auth-nuxt-3/](https://forbik.github.io/auth-nuxt-3/)
+
 ## Setup
 
 Make sure to install the dependencies:

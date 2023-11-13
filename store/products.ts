@@ -29,14 +29,16 @@ export const useProductStore = defineStore('products', {
     total: 0
   }),
   actions: {
-    async fetchProducts (limit: number = 12): Promise<ProductPayloadInterface[]> {
+    async fetchProducts (limit: number = 12, loadMore: Boolean = false): Promise<ProductPayloadInterface[]> {
+      const offset = this.products.length
       try {
         const response = await fetch(useEndpoint('products', {
-          limit
+          limit,
+          skip: loadMore ? offset : ''
         }))
         const data = await response.json()
         if (data && data.products) {
-          this.products = data.products
+          this.products = loadMore ? [...this.products, ...data.products] : data.products
           this.total = data.total
           return data.products as ProductPayloadInterface[]
         } else {
